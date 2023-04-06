@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.cc2761df.css",
+    "main.js": "/static/js/main.c2871d6c.js",
+    "static/media/Oldschool Volkswagen GolfMK1 __ Short clip __ MadLife Prod.mp4": "/static/media/Oldschool Volkswagen GolfMK1 __ Short clip __ MadLife Prod.cf4212a33425018b9c02.mp4",
+    "static/media/MetallicLogoPromoImage.jpg": "/static/media/MetallicLogoPromoImage.4a9085eca84de06afeb5.jpg",
+    "static/media/ComboLogo01.png": "/static/media/ComboLogo01.7adf0ca82f4e39c6279a.png",
+    "static/media/PrimaryIcon.png": "/static/media/PrimaryIcon.00eef8a6a8bf1b9db923.png",
+    "index.html": "/index.html",
+    "main.cc2761df.css.map": "/static/css/main.cc2761df.css.map",
+    "main.c2871d6c.js.map": "/static/js/main.c2871d6c.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cc2761df.css",
+    "static/js/main.c2871d6c.js"
+  ]
+}
