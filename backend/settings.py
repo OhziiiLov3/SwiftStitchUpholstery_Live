@@ -130,6 +130,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'swiftstitchdb',
+        'HOST': 'localhost',
     }
 }
 
