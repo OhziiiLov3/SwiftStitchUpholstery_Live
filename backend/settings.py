@@ -178,6 +178,7 @@ STATICFILES_DIRS = [
 MEDIA_ROOT = BASE_DIR / 'static/images'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 AWS_QUERYSTRING_AUTH = False
 CORS_ALLOW_ALL_ORIGINS: True
