@@ -1,8 +1,12 @@
+import merchCard1 from "./images/ComboLogo01.png";
+import merchCard2 from "./images/MetallicLogoPromoImage.jpg";
+import merchCard3 from "./images/ComboLogo01.png";
+
 const merchProducts = [
   {
     _id: "1",
     name: "Swift Stitch Tee",
-    image: "/images/ComboLogo01.png",
+    image: merchCard1,
     description: "Pre-washed SS Hero Tee",
     price: 30.0,
     countInStock: 30,
@@ -11,8 +15,7 @@ const merchProducts = [
   {
     _id: "2",
     name: "Swift Stitch Hoodie",
-    image:
-      "/images/MetallicLogoPromoImage.jpg",
+    image: merchCard2,
     description: "Custom embrodied Hoodies",
     material: "Carbon fiber, Ployuerthane Resin",
     price: 100.0,
@@ -22,7 +25,7 @@ const merchProducts = [
   {
     _id: "3",
     name: "Swift Stitich Tank Tops",
-    image: "/images/ComboLogo01.png",
+    image: merchCard3,
     description: "Swift Stitch Og Tees",
     material: "Carbon fiber, Ployuerthane Resin",
     price: 30.0,
