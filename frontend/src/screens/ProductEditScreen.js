@@ -94,11 +94,14 @@ const ProductEditScreen = () => {
 
   return (
     <div className="my-5 p-4">
-      <Link className="btn btn-primary" to={"/admin/productlist"}>
+      <Link className="btn btn-light" to={"/admin/productlist"}>
         Go Back
       </Link>
-      <Container className="bg-dark my-5 p-3">
-        <h1 className="mx-auto py-3">Edit Product</h1>
+      <Container
+        className="my-5 p-3 rounded w-75"
+        style={{ backgroundColor: "#2A2928" }}
+      >
+        <h2 className="mx-auto py-3 text-center">Edit Product</h2>
         {loadingUpdate && <Loader />}
         {errorUpdate && <Alert variant="danger">{errorUpdate}</Alert>}
 
@@ -109,7 +112,9 @@ const ProductEditScreen = () => {
         ) : (
           <Form variant="light" onSubmit={submitHandler}>
             <Form.Group className="mb-3 py-3" controlId="name">
-              <Form.Label style={{ color: "#333" }}>Name</Form.Label>
+              <Form.Label style={{ color: "#C19C6A" }}>
+                <h2>Name</h2>
+              </Form.Label>
               <Form.Control
                 type="name"
                 placeholder="Enter Name"
@@ -119,7 +124,9 @@ const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group className="mb-3 py-3" controlId="price">
-              <Form.Label style={{ color: "#333" }}>Price</Form.Label>
+              <Form.Label style={{ color: "#333" }}>
+                <h2>Price</h2>
+              </Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Enter Price"
@@ -129,7 +136,9 @@ const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group className="mb-3 py-3" controlId="image">
-              <Form.Label style={{ color: "#333" }}>Image</Form.Label>
+              <Form.Label style={{ color: "#333" }}>
+                <h2>Image</h2>
+              </Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter Image"
@@ -137,10 +146,11 @@ const ProductEditScreen = () => {
                 onChange={(e) => setImage(e.target.value)}
               ></Form.Control>
 
-              <Form.Group controlId="image-file" className="mb-3">
+              <Form.Group controlId="image-file" className="py-3">
                 {" "}
-                <Form.Label>Upload Image</Form.Label>{" "}
+                {/* <Form.Label>Upload Image</Form.Label>{" "} */}
                 <Form.Control
+                  style={{ color: "#C19C6A" }}
                   type="file"
                   label="Choose File"
                   custom
@@ -150,8 +160,11 @@ const ProductEditScreen = () => {
               {uploading && <Loader />}
             </Form.Group>
 
-            <Form.Group className="mb-3 py-3" controlId="make">
-              <Form.Label style={{ color: "#333" }}>Make</Form.Label>
+            <Form.Group className="mb-2" controlId="make">
+              <Form.Label style={{ color: "#333" }}>
+                {" "}
+                <h2>Make</h2>
+              </Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter Name"
@@ -161,7 +174,9 @@ const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group className="mb-3 py-3" controlId="model">
-              <Form.Label style={{ color: "#333" }}>Model</Form.Label>
+              <Form.Label style={{ color: "#333" }}>
+                <h2>Model</h2>
+              </Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter Model"
@@ -171,7 +186,9 @@ const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group className="mb-3 py-3" controlId="countInStock">
-              <Form.Label style={{ color: "#333" }}>Stock</Form.Label>
+              <Form.Label style={{ color: "#333" }}>
+                <h2>Stock</h2>
+              </Form.Label>
               <Form.Control
                 type="number"
                 placeholder="Enter Stock"
@@ -181,7 +198,9 @@ const ProductEditScreen = () => {
             </Form.Group>
 
             <Form.Group className="mb-3 py-3" controlId="description">
-              <Form.Label style={{ color: "#333" }}>Description</Form.Label>
+              <Form.Label style={{ color: "#333" }}>
+                <h2>Description</h2>
+              </Form.Label>
               <Form.Control
                 type="text"
                 placeholder="Enter Description"

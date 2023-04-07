@@ -28,9 +28,9 @@ const ShippingScreen = () => {
     <div className="my-3 p-5">
       <Container className="my-5 p-3">
         <Checkout step1 step2 />
-        <h1> Shipping</h1>
+        <h1 className="text-center"> Shipping</h1>
         <Row
-          className="justify-content-md-center rounded"
+          className="d-flex mx-auto justify-content-center rounded w-75"
           style={{ backgroundColor: "#2A2928" }}
         >
           <a className="navbar-brand justify-content-center mt-3" href="/">

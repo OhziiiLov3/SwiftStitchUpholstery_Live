@@ -70,11 +70,16 @@ const ProfileScreen = () => {
         {message && <Message variant="danger">{message}</Message>}
         {error && <Message variant="danger">{error}</Message>}
         {loading && <Loader />}
-        <Row className="justify-content-md-center bg-dark">
+        <Row
+          className="justify-content-md-center rounded"
+          style={{ backgroundColor: "#2A2928" }}
+        >
           <Col>
             <Form onSubmit={submitHandler}>
               <Form.Group className="mb-3 py-3" controlId="name">
-                <Form.Label style={{ color: "#30303080" }}>Name</Form.Label>
+                <Form.Label style={{ color: "#30303080" }}>
+                  <h2>Name</h2>
+                </Form.Label>
                 <Form.Control
                   required
                   type="name"
@@ -86,7 +91,7 @@ const ProfileScreen = () => {
 
               <Form.Group className="mb-3 py-3" controlId="email">
                 <Form.Label style={{ color: "#30303080" }}>
-                  Email Address
+                  <h2>Email Address</h2>
                 </Form.Label>
                 <Form.Control
                   required
@@ -98,7 +103,9 @@ const ProfileScreen = () => {
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="password">
-                <Form.Label style={{ color: "#30303080" }}>Password</Form.Label>
+                <Form.Label style={{ color: "#30303080" }}>
+                  <h2>Password</h2>
+                </Form.Label>
                 <Form.Control
                   type="password"
                   placeholder="Enter Password"
@@ -110,7 +117,7 @@ const ProfileScreen = () => {
               <Form.Group className="mb-3" controlId="passwordConfirm">
                 <Form.Label style={{ color: "#30303080" }}>
                   {" "}
-                  Confirm Password
+                  <h2>Confirm Password</h2>
                 </Form.Label>
                 <Form.Control
                   type="password"
@@ -119,7 +126,12 @@ const ProfileScreen = () => {
                   onChange={(e) => setConfrimPassword(e.target.value)}
                 ></Form.Control>
               </Form.Group>
-              <Button className="my-3 p-2" type="submit" variant="light">
+              <Button
+                className="my-3 p-2"
+                type="submit"
+                variant="light"
+                style={{ backgroundColor: "#C19C6A" }}
+              >
                 Update
               </Button>
             </Form>
@@ -160,7 +172,9 @@ const ProfileScreen = () => {
                   </td>
                   <td>
                     <LinkContainer to={`/order/${order._id}`}>
-                      <Button variant="light" className="btn-sm">Details</Button>
+                      <Button variant="light" className="btn-sm">
+                        Details
+                      </Button>
                     </LinkContainer>
                   </td>
                 </tr>
