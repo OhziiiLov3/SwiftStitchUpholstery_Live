@@ -8,7 +8,7 @@ const HomeBlog = ({blog}) => {
   return (
     <Container className="d-flex align-items-center justify-content-center mx-auto p-2">
       <div className="blog-page p-5">
-        <h1 className="text-center my-3 py-4">Montly Blog</h1>
+        <h1 className="text-center my-3 py-4">Monthly Blog</h1>
         <Row xs={1} md={2} className="g-4">
           {blogs.map((blog) => (
             <Col className="d-flex align-items-center justify-content-center p-2">

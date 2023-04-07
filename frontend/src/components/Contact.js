@@ -45,8 +45,7 @@ function Contact() {
       <div className="text-center">
         <h1>Contact Me</h1>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Recusandae,
-          nemo?
+          Please Contact for more a quote today! 
         </p>
         <span className="success-message">{successMessage}</span>
       </div>
