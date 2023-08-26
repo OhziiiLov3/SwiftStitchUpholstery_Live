@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
+import django_heroku
 import environ
 from datetime import timedelta
 from pathlib import Path
@@ -34,7 +35,9 @@ SECRET_KEY = str(os.getenv('SECRET_KEY'))
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.0', 'localhost','swiftstitch-demo.herokuapp.com']
+ALLOWED_HOSTS = ['127.0.0.0', 'localhost', 'swiftstitch-demo.herokuapp.com']
+
+CSRF_TRUSTED_ORIGINS = []
 
 
 # Application definition
@@ -126,10 +129,22 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'swiftstitchdb',
+
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'swiftstitchdb',
+        'NAME': 'railway',
+        'USER': 'postgres',
+        'PASSWORD': 'Q3oIG9EcTYDjrXTYskvt',
+        'HOST': 'containers-us-west-132.railway.app',
+        'PORT': '5513',
 
     }
 }
@@ -202,5 +217,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 if os.getcwd() == '/app':
     DEBUG = False
 
-import django_heroku
 django_heroku.settings(locals())
