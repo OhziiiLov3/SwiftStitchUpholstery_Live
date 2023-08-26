@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
-
+import dj_database_url
 import django_heroku
 import environ
 from datetime import timedelta
@@ -137,12 +137,12 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     }
 # }
 
-# DATABASE_URL = "postgresql://postgres:Q3oIG9EcTYDjrXTYskvt@containers-us-west-132.railway.app:5513/railway"
+DATABASE_URL = "postgresql://postgres:Q3oIG9EcTYDjrXTYskvt@containers-us-west-132.railway.app:5513/railway"
 
 
-# DATABASES= {
-#     'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800)
-# }
+DATABASES= {
+    'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800)
+}
 
 DATABASES = {
     'default': {
