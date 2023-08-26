@@ -144,17 +144,17 @@ DATABASES= {
     'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800)
 }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'railway',
-        'USER': 'postgres',
-        'PASSWORD': 'Q3oIG9EcTYDjrXTYskvt',
-        'HOST': 'containers-us-west-132.railway.app',
-        'PORT': '5513',
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql',
+#         'NAME': 'railway',
+#         'USER': 'postgres',
+#         'PASSWORD': 'Q3oIG9EcTYDjrXTYskvt',
+#         'HOST': 'containers-us-west-132.railway.app',
+#         'PORT': '5513',
 
-    }
-}
+#     }
+# }
 
 
 # Password validation
