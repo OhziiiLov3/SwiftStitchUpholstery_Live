@@ -10,7 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.1/ref/settings/
 """
 
-import django_heroku
+import dj_database_url
 import environ
 from datetime import timedelta
 from pathlib import Path
@@ -32,11 +32,15 @@ environ.Env.read_env()
 
 SECRET_KEY = str(os.getenv('SECRET_KEY'))
 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+RENDER_EXTERNAL_HOSTNAME = os.environ.get('RENDER_EXTERNAL_HOSTNAME')
+if RENDER_EXTERNAL_HOSTNAME:
+    ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
+    
 CSRF_TRUSTED_ORIGINS = []
 
 
@@ -137,6 +141,13 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     }
 # }
 
+DATABASES = {
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='postgresql://postgres:postgres@localhost:5432/swiftstitchdb',
+        conn_max_age=600
+    )
+}
 # DATABASE_URL = "postgresql://postgres:Q3oIG9EcTYDjrXTYskvt@containers-us-west-132.railway.app:5513/railway"
 
 
@@ -144,17 +155,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     'default': dj_database_url.config(default=DATABASE_URL, conn_max_age=1800)
 # }
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'zootywater',
-        'USER': 'postgres',
-        'PASSWORD': 'Q3oIG9EcTYDjrXTYskvt',
-        'HOST': 'containers-us-west-132.railway.app',
-        'PORT': '5513',
 
-    }
-}
 
 
 # Password validation
