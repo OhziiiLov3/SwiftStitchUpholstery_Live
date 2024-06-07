@@ -143,7 +143,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL', 'postgresql://postgres:postgres@localhost:5432/swfitstitchdb_4gvs')
+        default=os.getenv('DATABASE_URL')
     )
 }
         # conn_max_age=1800
