@@ -1,6 +1,6 @@
 databases:
   - name: swiftStitch
-    databaseName: swfitstitchdb
+    databaseName: swiftStitch
     user: backend
 
 services:
