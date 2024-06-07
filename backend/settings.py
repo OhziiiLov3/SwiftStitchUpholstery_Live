@@ -141,11 +141,14 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #     }
 # }
 
+DATABASE_URL = os.getenv('DATABASE_URL')
+
 DATABASES = {
     'default': dj_database_url.config(
-        default=os.getenv('DATABASE_URL')
+        default=DATABASE_URL
     )
 }
+
         # conn_max_age=1800
 # DATABASE_URL = "postgresql://postgres:Q3oIG9EcTYDjrXTYskvt@containers-us-west-132.railway.app:5513/railway"
 
