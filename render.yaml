@@ -1,7 +1,7 @@
 databases:
   - name: swiftStitch
     databaseName: swiftStitch
-    user: backend
+    user: swiftStitch
 
 services:
   - type: web
