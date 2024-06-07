@@ -127,7 +127,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'backend.wsgi.application'
+WSGI_APPLICATION = 'swiftStitch.wsgi.application'
 
 
 # Database
