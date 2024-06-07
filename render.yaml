@@ -1,18 +1,18 @@
 databases:
-  - name: swiftstitch
-    databaseName: swfitstitch
+  - name: swiftStitch
+    databaseName: swfitstitchdb
     user: backend
 
 services:
   - type: web
-    name: swiftstitch
+    name: swiftStitch
     runtime: python
     buildCommand: "./build.sh"
-    startCommand: "python -m gunicorn mysite.asgi:application -k uvicorn.workers.UvicornWorker"
+    startCommand: "gunicorn swiftStitch.wsgi:application"
     envVars:
       - key: DATABASE_URL
         fromDatabase:
-          name: swiftstitch
+          name: swiftStitch
           property: connectionString
       - key: SECRET_KEY
         generateValue: true
