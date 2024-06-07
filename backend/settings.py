@@ -144,8 +144,10 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 DATABASES = {
     'default': dj_database_url.config(
         # Feel free to alter this value to suit your needs.
-        default='postgresql://postgres:postgres@localhost:5432/swiftstitchdb',
+        default='postgresql://postgres:postgres@localhost:5432/swfitstitchdb_4gvs',
     )
+
+
 }
         # conn_max_age=1800
 # DATABASE_URL = "postgresql://postgres:Q3oIG9EcTYDjrXTYskvt@containers-us-west-132.railway.app:5513/railway"
